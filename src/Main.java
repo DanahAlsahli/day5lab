@@ -73,6 +73,14 @@ public class Main {
             System.out.println("not equal");
         }
 
+        //Q6:
+        System.out.println("enter a word:");
+        String word = input.nextLine();
+        String reverse = "";
+        for (int i = word.length() - 1; i >= 0; i--) {
+            reverse = reverse + word.charAt(i);
+        }
+        System.out.println("the reverse word: " + reverse);
 
         //Q7:
 
@@ -202,6 +210,32 @@ public class Main {
         System.out.println("reverse:" + revee);
 
         //Q17:
+        int numberr;
+        int largest;
+        int smallest;
+        char choice;
+
+        System.out.println("please enter a number:");
+        numberr= input.nextInt();
+        largest= numberr;
+        smallest= numberr;
+        do {
+            System.out.println("do u want to continue y or n? ");
+            choice= input.next().charAt(0);
+            if (choice== 'y') {
+                System.out.println("enter the number:");
+                numberr= input.nextInt();
+                if (numberr>largest) {
+                    largest= numberr;
+                }
+                if (numberr<smallest) {
+                    smallest=numberr;
+                }
+            }
+
+        }while (choice== 'y');
+        System.out.println("the largest number: "+largest);
+        System.out.println("the smallest number: "+smallest);
         //System.out.println("how many numbers?");
        // int b = input.nextInt();
 
